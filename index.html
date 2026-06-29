@@ -87,7 +87,7 @@
           <source src="static/videos/banner_video.mp4" type="video/mp4">
         </video>
         <h2 class="subtitle has-text-centered mt-4">
-          The LUTA Hand의 단일 모터 기반 텐던 구동 메커니즘과 가벼운 하드웨어 구성을 보여주는 요약 영상입니다.
+          Overview of the LUTA Hand demonstrating single-motor driven underactuated grasping and lightweight hardware architecture.
         </h2>
       </div>
     </div>
@@ -105,9 +105,117 @@
             <p>
               This study presents a lightweight, underactuated three-fingered robotic hand that incorporates tendon-driven actuation and compliant joint structures. A shared tendon-routing scheme enables synchronized finger flexion with a single actuator, while passive restoring forces are provided by rolling contact joints and elastic ligaments, removing the need for antagonistic actuation. All actuation components are embedded within the hand, resulting in a compact and portable configuration. 
             </p>
+            <p>
+              Experimental evaluations demonstrate consistent finger motion, passive adaptation to varying object geometries, and the ability to perform multiple types of grasps with an underactuated architecture. These findings indicate the potential of the proposed design to serve as an efficient and compact solution for robotic manipulation.
+            </p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered mb-5">Hardware Configuration</h2>
+      <div class="content has-text-justified">
+        <p>
+          The proposed robotic hand integrates all components natively within the palm structure. It features a self-contained layout housing the single servomotor transmission, rolling contact joint configurations, and full embedded tendon routing, achieving a highly portable and lightweight configuration.
+        </p>
+      </div>
+      <figure class="image is-16by9 box">
+        <img src="static/images/hardware_overview.jpg" alt="LUTA Hand Hardware Overview">
+        <figcaption class="has-text-centered mt-2 is-size-6 has-text-grey">
+          <em>Overall hardware configuration showcasing the integrated palm assembly and multi-link finger modules.</em>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered mb-2">Real-time Pick and Place Experiments</h2>
+      <p class="subtitle is-5 has-text-centered has-text-grey mb-6">Demonstration of precision grasping and dynamic manipulation across diverse object profiles</p>
+      
+      <div class="columns is-multiline">
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <video autoplay controls muted loop width="100%">
+                <source src="static/videos/pick_place_object1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-content has-text-centered py-3">
+              <p class="title is-5">Object 1: Cylinder</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <video autoplay controls muted loop width="100%">
+                <source src="static/videos/pick_place_object2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-content has-text-centered py-3">
+              <p class="title is-5">Object 2: Sphere</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <video autoplay controls muted loop width="100%">
+                <source src="static/videos/pick_place_object3.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-content has-text-centered py-3">
+              <p class="title is-5">Object 3: Box</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <video autoplay controls muted loop width="100%">
+                <source src="static/videos/pick_place_object4.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-content has-text-centered py-3">
+              <p class="title is-5">Object 4: Complex Geometry</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <video autoplay controls muted loop width="100%">
+                <source src="static/videos/pick_place_object5.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-content Dried has-text-centered py-3">
+              <p class="title is-5">Object 5: Compliant/Soft</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <video autoplay controls muted loop width="100%">
+                <source src="static/videos/pick_place_object6.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-content has-text-centered py-3">
+              <p class="title is-5">Object 6: Thin Profile</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </section>
 
@@ -159,13 +267,13 @@
       <h2 class="title is-3 has-text-centered mb-5">Grasp & Object Taxonomy</h2>
       <div class="content has-text-justified">
         <p>
-          LUTA Hand가 지원하는 파지 유형(Pinch grasp, Power grasp 등)과 다양한 기하학적 형상을 가진 대상 물체들의 분류 체계(Taxonomy)입니다. 단일 제어 입력만으로도 물체의 크기와 형태에 따라 파지 모드가 자연스럽게 전환됩니다.
+          Classification of targeted grasp modalities (e.g., pinch vs. power grasps) and geometric objects mapped to validate the functionality of the single-input underactuated architecture. The transition between different grasp modes occurs natively based on object dimensions and environmental constraints.
         </p>
       </div>
       <figure class="image is-16by9 box">
         <img src="static/images/taxonomy.jpg" alt="LUTA Hand Grasp Taxonomy">
         <figcaption class="has-text-centered mt-2 is-size-6 has-text-grey">
-          <em>분류 체계 다이어그램 (Pinch vs Power Grasp 및 물체군 분류)</em>
+          <em>Taxonomy chart mapping interaction modes across distinct geometric variations.</em>
         </figcaption>
       </figure>
     </div>
@@ -173,38 +281,38 @@
 
   <section class="section">
     <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered mb-5">Experimental Evaluation</h2>
+      <h2 class="title is-3 has-text-centered mb-5">Experimental Evaluation Summary</h2>
       
       <div class="columns is-multiline">
         <div class="column is-6">
           <div class="box" style="height: 100%;">
-            <h4 class="title is-4">1. Kinematic & Motion Test</h4>
+            <h4 class="title is-4">1. Kinematic & Motion Profile</h4>
             <p class="is-size-6">
-              단일 액추에이터를 통한 세 손가락의 동기화된 굴곡(Flexion) 및 롤링 콘택트 조인트의 복원력을 검증하여 일관된 모션 궤적을 확인했습니다.
+              Validated synchronized multi-finger flexion paths driven by a single actuator and assessed rolling contact joint repeatability.
             </p>
           </div>
         </div>
         <div class="column is-6">
           <div class="box" style="height: 100%;">
-            <h4 class="title is-4">2. Passive Adaptation Test</h4>
+            <h4 class="title is-4">2. Passive Adaptation Capability</h4>
             <p class="is-size-6">
-              물체 접촉 시 텐던 이동량이 비접촉 손가락으로 재분배되는 메커니즘을 평가하여, 별도 센서 없이 형상에 수동 적응하는 능력을 검증했습니다.
+              Evaluated tendon excursion redistribution upon initial object collision to confirm adaptive mechanical conformity without active feedback loops.
             </p>
           </div>
         </div>
         <div class="column is-6">
           <div class="box" style="height: 100%;">
-            <h4 class="title is-4">3. Static Grasping Evaluation</h4>
+            <h4 class="title is-4">3. Static Grasping Reliability</h4>
             <p class="is-size-6">
-              다양한 크기, 무게, 재질을 가진 정적 물체들을 안정적으로 파지하고 유지할 수 있는 지지력과 파지 안정성을 정량화했습니다.
+              Quantified retention force capabilities, payload metrics, and threshold constraints for secure grasping across diverse materials.
             </p>
           </div>
         </div>
         <div class="column is-6">
           <div class="box" style="height: 100%;">
-            <h4 class="title is-4">4. Dynamic Manipulation (Pick & Place)</h4>
+            <h4 class="title is-4">4. Dynamic Manipulation Pipeline</h4>
             <p class="is-size-6">
-              실시간으로 물체를 집어 올린 후 지정된 위치로 이동시키는 동적 환경 테스트를 통해 실제 작업 환경에서의 활용성을 입증했습니다.
+              Verified end-to-end operation through continuous real-time pick-and-place trials integrated into dynamic robotic arm environments.
             </p>
           </div>
         </div>
@@ -213,100 +321,12 @@
     </div>
   </section>
 
-  <section class="section hero is-light">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered mb-2">Real-time Pick and Place</h2>
-      <p class="subtitle is-5 has-text-centered has-text-grey mb-6">물체별 정밀 파지 및 이동 시연 영상</p>
-      
-      <div class="columns is-multiline">
-        <div class="column is-4">
-          <div class="card">
-            <div class="card-image">
-              <video autoplay controls muted loop width="100%">
-                <source src="static/videos/pick_place_object1.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="card-content has-text-centered py-3">
-              <p class="title is-5">Object 1 (Cylinder)</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="column is-4">
-          <div class="card">
-            <div class="card-image">
-              <video autoplay controls muted loop width="100%">
-                <source src="static/videos/pick_place_object2.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="card-content has-text-centered py-3">
-              <p class="title is-5">Object 2 (Sphere)</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="column is-4">
-          <div class="card">
-            <div class="card-image">
-              <video autoplay controls muted loop width="100%">
-                <source src="static/videos/pick_place_object3.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="card-content has-text-centered py-3">
-              <p class="title is-5">Object 3 (Box)</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="column is-4">
-          <div class="card">
-            <div class="card-image">
-              <video autoplay controls muted loop width="100%">
-                <source src="static/videos/pick_place_object4.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="card-content has-text-centered py-3">
-              <p class="title is-5">Object 4 (Complex Shape)</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="column is-4">
-          <div class="card">
-            <div class="card-image">
-              <video autoplay controls muted loop width="100%">
-                <source src="static/videos/pick_place_object5.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="card-content has-text-centered py-3">
-              <p class="title is-5">Object 5 (Soft Object)</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="column is-4">
-          <div class="card">
-            <div class="card-image">
-              <video autoplay controls muted loop width="100%">
-                <source src="static/videos/pick_place_object6.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="card-content has-text-centered py-3">
-              <p class="title is-5">Object 6 (Tiny Object)</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </section>
-
-  <section class="section" id="full-video">
+  <section class="section hero is-light" id="full-video">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Full Supplementary Video</h2>
-          <p class="subtitle is-6 has-text-grey mb-5">전체 실험 및 메커니즘 소개가 포함된 통합 영상</p>
+          <h2 class="title is-3">Full Supplementary Video Demonstration</h2>
+          <p class="subtitle is-6 has-text-grey mb-5">Comprehensive technical walkthrough detailing hardware, mechanisms, and integrated manipulation trials</p>
           <div class="publication-video">
             <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_ID" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
@@ -318,11 +338,11 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
+        <h2 class="title">BibTeX Citation</h2>
       </div>
       <pre><code>@article{byun2025lutahand,
   title={The LUTA Hand: Development of a Lightweight Underactuated Three-fingered Robotic Hand for Adaptive Grasping},
-  author={Byun, Seunghwan and Moon, Seongkyeong Beet, Sung, Eunho and You, Seungbin and Park, Yong-Lae and Park, Jaeheung},
+  author={Byun, Seunghwan and Moon, Seongkyeong and Sung, Eunho and You, Seungbin and Park, Yong-Lae and Park, Jaeheung},
   journal={International Journal of Control, Automation, and Systems},
   volume={23},
   number={12},
@@ -340,7 +360,7 @@
         <div class="column is-8">
           <div class="content has-text-centered">
             <p>
-              This website is based on the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+              This website is adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
             </p>
           </div>
         </div>
