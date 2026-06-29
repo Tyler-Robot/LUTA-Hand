@@ -134,104 +134,110 @@
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered mb-2">Real-time Pick and Place Experiments</h2>
-      <p class="subtitle is-5 has-text-centered has-text-grey mb-6">Demonstration of precision grasping and dynamic manipulation across diverse object profiles</p>
+      <p class="subtitle is-5 has-text-centered has-text-grey mb-6">Select an object to view the precision grasping and dynamic manipulation demonstration</p>
       
-      <div class="columns is-multiline is-centered">
-        
-        <div class="column is-3">
-          <div class="card">
-            <div class="card-image">
-              <video autoplay controls muted loop width="100%">
+      <div class="tabs is-toggle is-fullwidth is-medium mb-5">
+        <ul>
+          <li id="tab-bottle" class="is-active"><a onclick="showObject('bottle')"><span>Bottle</span></a></li>
+          <li id="tab-screwdriver"><a onclick="showObject('screwdriver')"><span>Screwdriver</span></a></li>
+          <li id="tab-hammer"><a onclick="showObject('hammer')"><span>Hammer</span></a></li>
+          <li id="tab-cd"><a onclick="showObject('cd')"><span>Compact Disc</span></a></li>
+          <li id="tab-tennis"><a onclick="showObject('tennis')"><span>Tennis Ball</span></a></li>
+          <li id="tab-marker"><a onclick="showObject('marker')"><span>Marker</span></a></li>
+          <li id="tab-mug"><a onclick="showObject('mug')"><span>Mug</span></a></li>
+        </ul>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <div class="box has-text-centered" style="background-color: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+            
+            <div id="content-bottle" class="object-video-content">
+              <video autoplay controls muted loop width="100%" style="max-height: 520px; object-fit: contain;">
                 <source src="static/videos/pick_place_bottle.mp4" type="video/mp4">
               </video>
+              <p class="title is-4 mt-4">Object 1: Bottle</p>
             </div>
-            <div class="card-content has-text-centered py-2 px-2">
-              <p class="title is-6">Object 1: Bottle</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="column is-3">
-          <div class="card">
-            <div class="card-image">
-              <video autoplay controls muted loop width="100%">
+
+            <div id="content-screwdriver" class="object-video-content is-hidden">
+              <video controls muted loop width="100%" style="max-height: 520px; object-fit: contain;">
                 <source src="static/videos/pick_place_screwdriver.mp4" type="video/mp4">
               </video>
+              <p class="title is-4 mt-4">Object 2: Screwdriver</p>
             </div>
-            <div class="card-content has-text-centered py-2 px-2">
-              <p class="title is-6">Object 2: Screwdriver</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="column is-3">
-          <div class="card">
-            <div class="card-image">
-              <video autoplay controls muted loop width="100%">
+
+            <div id="content-hammer" class="object-video-content is-hidden">
+              <video controls muted loop width="100%" style="max-height: 520px; object-fit: contain;">
                 <source src="static/videos/pick_place_hammer.mp4" type="video/mp4">
               </video>
+              <p class="title is-4 mt-4">Object 3: Hammer</p>
             </div>
-            <div class="card-content has-text-centered py-2 px-2">
-              <p class="title is-6">Object 3: Hammer</p>
-            </div>
-          </div>
-        </div>
 
-        <div class="column is-3">
-          <div class="card">
-            <div class="card-image">
-              <video autoplay controls muted loop width="100%">
+            <div id="content-cd" class="object-video-content is-hidden">
+              <video controls muted loop width="100%" style="max-height: 520px; object-fit: contain;">
                 <source src="static/videos/pick_place_compact_disc.mp4" type="video/mp4">
               </video>
+              <p class="title is-4 mt-4">Object 4: Compact Disc</p>
             </div>
-            <div class="card-content has-text-centered py-2 px-2">
-              <p class="title is-6">Object 4: Compact Disc</p>
-            </div>
-          </div>
-        </div>
 
-        <div class="column is-3">
-          <div class="card">
-            <div class="card-image">
-              <video autoplay controls muted loop width="100%">
+            <div id="content-tennis" class="object-video-content is-hidden">
+              <video controls muted loop width="100%" style="max-height: 520px; object-fit: contain;">
                 <source src="static/videos/pick_place_tennis_ball.mp4" type="video/mp4">
               </video>
+              <p class="title is-4 mt-4">Object 5: Tennis Ball</p>
             </div>
-            <div class="card-content has-text-centered py-2 px-2">
-              <p class="title is-6">Object 5: Tennis Ball</p>
-            </div>
-          </div>
-        </div>
 
-        <div class="column is-3">
-          <div class="card">
-            <div class="card-image">
-              <video autoplay controls muted loop width="100%">
+            <div id="content-marker" class="object-video-content is-hidden">
+              <video controls muted loop width="100%" style="max-height: 520px; object-fit: contain;">
                 <source src="static/videos/pick_place_marker.mp4" type="video/mp4">
               </video>
+              <p class="title is-4 mt-4">Object 6: Marker</p>
             </div>
-            <div class="card-content has-text-centered py-2 px-2">
-              <p class="title is-6">Object 6: Marker</p>
-            </div>
-          </div>
-        </div>
 
-        <div class="column is-3">
-          <div class="card">
-            <div class="card-image">
-              <video autoplay controls muted loop width="100%">
+            <div id="content-mug" class="object-video-content is-hidden">
+              <video controls muted loop width="100%" style="max-height: 520px; object-fit: contain;">
                 <source src="static/videos/pick_place_mug.mp4" type="video/mp4">
               </video>
+              <p class="title is-4 mt-4">Object 7: Mug</p>
             </div>
-            <div class="card-content has-text-centered py-2 px-2">
-              <p class="title is-6">Object 7: Mug</p>
-            </div>
+
           </div>
         </div>
-
       </div>
+      
     </div>
   </section>
+
+  <script>
+    function showObject(objId) {
+      // Hide all video containers and pause active playbacks
+      document.querySelectorAll('.object-video-content').forEach(function(el) {
+        el.classList.add('is-hidden');
+        const video = el.querySelector('video');
+        if (video) video.pause();
+      });
+      
+      // Deactivate all tab element states
+      document.querySelectorAll('.tabs ul li').forEach(function(el) {
+        el.classList.remove('is-active');
+      });
+      
+      // Activate target video container and trigger playback
+      const activeContent = document.getElementById('content-' + objId);
+      if (activeContent) {
+        activeContent.classList.remove('is-hidden');
+        const video = activeContent.querySelector('video');
+        if (video) {
+          video.currentTime = 0;
+          video.play();
+        }
+      }
+      
+      // Set targeted navigation tab state to active
+      const activeTab = document.getElementById('tab-' + objId);
+      if (activeTab) activeTab.classList.add('is-active');
+    }
+  </script>
 
   <section class="section">
     <div class="container is-max-desktop">
@@ -379,7 +385,7 @@
       </div>
       <pre><code>@article{byun2025lutahand,
   title={The LUTA Hand: Development of a Lightweight Underactuated Three-fingered Robotic Hand for Adaptive Grasping},
-  author={Byun, Seunghwan and Moon, Seongkyeong and Sung, Eunho and You, Seungbin and Park, Yong-Lae and Park, Jaeheung},
+  author={Byun, Seunghwan and Moon, Seongkyeong disintegration, Sung, Eunho and You, Seungbin and Park, Yong-Lae and Park, Jaeheung},
   journal={International Journal of Control, Automation, and Systems},
   volume={23},
   number={12},
