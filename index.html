@@ -5,55 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <meta name="title" content="The LUTA Hand - Seoul National University">
-  <meta name="description" content="Development of a Lightweight Underactuated Three-fingered Robotic Hand for Adaptive Grasping using a single motor and tendon-driven mechanism.">
-  <meta name="keywords" content="Robotic Hand, Adaptive Grasping, Underactuated Design, Tendon-driven Actuation, Rolling Contact Joint, Seoul National University">
+  <meta name="description" content="Development of a Lightweight Underactuated Three-fingered Robotic Hand for Adaptive Grasping.">
+  <meta name="keywords" content="Robotic Hand, Adaptive Grasping, Underactuated Design, Tendon-driven Actuation, Rolling Contact Joint, SNU">
   <meta name="author" content="Seunghwan Byun, Seongkyeong Moon, Eunho Sung, Seungbin You, Yong-Lae Park, Jaeheung Park">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
   
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Seoul National University">
-  <meta property="og:title" content="The LUTA Hand: Lightweight Underactuated Robotic Hand">
-  <meta property="og:description" content="Development of a Lightweight Underactuated Three-fingered Robotic Hand for Adaptive Grasping.">
-  <meta property="og:url" content="https://Tyler-Robot.github.io/LUTA-Hand/">
-  <meta property="og:image" content="static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="The LUTA Hand Preview">
-  <meta property="article:published_time" content="2025-01-01T00:00:00.000Z">
-  <meta property="article:author" content="Seunghwan Byun">
-  <meta property="article:section" content="Robotics Research">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The LUTA Hand: Lightweight Underactuated Robotic Hand">
-  <meta name="twitter:description" content="A lightweight underactuated three-fingered robotic hand for adaptive grasping.">
-  <meta name="twitter:image" content="static/images/social_preview.png">
-
-  <title>The LUTA Hand | Adaptive Grasping Robotic Hand</title>
+  <title>The LUTA Hand | Project Page</title>
   
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
 </head>
 <body>
 
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
   <main id="main-content">
+  
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -71,30 +48,26 @@
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>Seoul National University</span><br>
-              <span class="author-block"><sup>2</sup>Samsung Electronics</span><br>
+              <span class="author-block"><sup>1</sup>Seoul National University, <sup>2</sup>Samsung Electronics</span><br>
               <span class="author-block"><strong>International Journal of Control, Automation, and Systems (IJCAS) 2025</strong></span>
             </div>
 
             <div class="column has-text-centered mt-4">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="http://dx.doi.org/10.1007/s12555-025-0545-0" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
+                  <a href="http://dx.doi.org/10.1007/s12555-025-0545-0" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fas fa-file-pdf"></i></span>
                     <span>Paper</span>
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="#video-presentation"
-                  class="external-link button is-normal is-rounded is-dark">
+                  <a href="#full-video" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fab fa-youtube"></i></span>
                     <span>Video</span>
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="#" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
+                  <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
                   </a>
@@ -110,11 +83,11 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <video autoplay controls muted loop height="100%">
           <source src="static/videos/banner_video.mp4" type="video/mp4">
         </video>
         <h2 class="subtitle has-text-centered mt-4">
-          The LUTA Hand demonstrates robust adaptive grasping using a <strong>single servomotor</strong> and <strong>shared tendon-routing</strong>. It passively conforms to objects of varying sizes and shapes without independent joint control.
+          The LUTA Hand의 단일 모터 기반 텐던 구동 메커니즘과 가벼운 하드웨어 구성을 보여주는 요약 영상입니다.
         </h2>
       </div>
     </div>
@@ -127,13 +100,10 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Robotic hands are central to a wide range of manipulation tasks, enabling human-like dexterity and adaptability. However, achieving such functionality with minimal actuation and reduced mechanical complexity remains a key challenge. 
+              Robotic hands are central to a wide range of manipulation tasks, enabling human-like dexterity and adaptability. However, achieving such functionality with minimal actuation and reduced mechanical complexity remains a key challenge. Conventional approaches often rely on complex actuation mechanisms, resulting in increased system weight and limited integration flexibility. 
             </p>
             <p>
               This study presents a lightweight, underactuated three-fingered robotic hand that incorporates tendon-driven actuation and compliant joint structures. A shared tendon-routing scheme enables synchronized finger flexion with a single actuator, while passive restoring forces are provided by rolling contact joints and elastic ligaments, removing the need for antagonistic actuation. All actuation components are embedded within the hand, resulting in a compact and portable configuration. 
-            </p>
-            <p>
-              Experimental evaluations demonstrate consistent finger motion, passive adaptation to varying object geometries, and the ability to perform multiple types of grasps with an underactuated architecture.
             </p>
           </div>
         </div>
@@ -143,51 +113,157 @@
 
   <section class="section">
     <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          
-          <h2 class="title is-3">Adaptive Grasping Mechanism</h2>
-          <div class="content has-text-justified">
-            <p>
-              The LUTA Hand achieves adaptive grasping through its single, underactuated, tendon-driven design. A single tendon forms a continuous loop sequentially linking all three fingers. When one finger contacts an object and is kinematically constrained, the motor continues to rotate, redirecting the remaining tendon excursion to the non-contacting fingers.
-            </p>
-            <p>
-              This sequential contact behavior enables the hand to passively conform to various shapes and sizes. It allows the natural emergence of both <strong>pinch</strong> and <strong>power grasp</strong> configurations without any active reconfiguration.
-            </p>
-          </div>
-          <figure class="image is-16by9 mb-6">
-            <img src="static/images/fig4_sequential_contact.jpg" alt="Sequential contact during object grasp">
-            <figcaption class="has-text-centered mt-2 is-size-6 has-text-grey">
-              <em>Fig 4. Sequential contact during object grasp: thumb and index engaged first, with remaining tendon excursion redirected to the non-contacting finger.</em>
-            </figcaption>
-          </figure>
-
-          <h2 class="title is-3 mt-6">Passive Pretension Mechanism</h2>
-          <div class="content has-text-justified">
-            <p>
-              To enable finger extension without antagonistic actuators, the hand incorporates a passive mechanism comprising elastic extension tendons and rolling contact joint ligaments. The lateral latex ligaments (3M Unitek "Bummer") are deliberately positioned with a <strong>3 mm posterior offset</strong> from the center of rotation. 
-            </p>
-            <p>
-              This specific offset establishes a moment arm at the neutral position, producing a restorative torque that returns the joint to neutral while maintaining lateral stability and limiting parasitic yaw during flexion.
-            </p>
-          </div>
-          <figure class="image is-16by9">
-            <img src="static/images/fig5_passive_joint.jpg" alt="Passive joint structure">
-            <figcaption class="has-text-centered mt-2 is-size-6 has-text-grey">
-              <em>Fig 5. Passive joint structure with TPU-based rolling contact and tensioning configurations eliminating the need for additional restoring components.</em>
-            </figcaption>
-          </figure>
-
-        </div>
+      <h2 class="title is-3 has-text-centered mb-5">Grasp & Object Taxonomy</h2>
+      <div class="content has-text-justified">
+        <p>
+          LUTA Hand가 지원하는 파지 유형(Pinch grasp, Power grasp 등)과 다양한 기하학적 형상을 가진 대상 물체들의 분류 체계(Taxonomy)입니다. 단일 제어 입력만으로도 물체의 크기와 형태에 따라 파지 모드가 자연스럽게 전환됩니다.
+        </p>
       </div>
+      <figure class="image is-16by9 box">
+        <img src="static/images/taxonomy.jpg" alt="LUTA Hand Grasp Taxonomy">
+        <figcaption class="has-text-centered mt-2 is-size-6 has-text-grey">
+          <em>분류 체계 다이어그램 (Pinch vs Power Grasp 및 물체군 분류)</em>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
-  <section class="section hero is-light" id="video-presentation">
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered mb-5">Experimental Evaluation</h2>
+      
+      <div class="columns is-multiline">
+        <div class="column is-6">
+          <div class="box" style="height: 100%;">
+            <h3 class="title is-4">1. Kinematic & Motion Test</h3>
+            <p class="is-size-6">
+              단일 액추에이터를 통한 세 손가락의 동기화된 굴곡(Flexion) 및 롤링 콘택트 조인트의 복원력을 검증하여 일관된 모션 궤적을 확인했습니다.
+            </p>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="box" style="height: 100%;">
+            <h3 class="title is-4">2. Passive Adaptation Test</h3>
+            <p class="is-size-6">
+              물체 접촉 시 텐던 이동량이 비접촉 손가락으로 재분배되는 메커니즘을 평가하여, 별도 센서 없이 형상에 수동 적응하는 능력을 검증했습니다.
+            </p>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="box" style="height: 100%;">
+            <h3 class="title is-4">3. Static Grasping Evaluation</h3>
+            <p class="is-size-6">
+              다양한 크기, 무게, 재질을 가진 정적 물체들을 안정적으로 파지하고 유지할 수 있는 지지력과 파지 안정성을 정량화했습니다.
+            </p>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="box" style="height: 100%;">
+            <h3 class="title is-4">4. Dynamic Manipulation (Pick & Place)</h3>
+            <p class="is-size-6">
+              실시간으로 물체를 집어 올린 후 지정된 위치로 이동시키는 동적 환경 테스트를 통해 실제 작업 환경에서의 활용성을 입증했습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered mb-2">Real-time Pick and Place</h2>
+      <p class="subtitle is-5 has-text-centered has-text-grey mb-6">물체별 정밀 파지 및 이동 시연 영상</p>
+      
+      <div class="columns is-multiline">
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <video autoplay controls muted loop width="100%">
+                <source src="static/videos/pick_place_object1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-content has-text-centered py-3">
+              <p class="title is-5">Object 1 (예: Cylinder)</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <video autoplay controls muted loop width="100%">
+                <source src="static/videos/pick_place_object2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-content has-text-centered py-3">
+              <p class="title is-5">Object 2 (예: Sphere)</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <video autoplay controls muted loop width="100%">
+                <source src="static/videos/pick_place_object3.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-content has-text-centered py-3">
+              <p class="title is-5">Object 3 (예: Box)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <video autoplay controls muted loop width="100%">
+                <source src="static/videos/pick_place_object4.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-content has-text-centered py-3">
+              <p class="title is-5">Object 4 (예: Complex Shape)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <video autoplay controls muted loop width="100%">
+                <source src="static/videos/pick_place_object5.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-content has-text-centered py-3">
+              <p class="title is-5">Object 5 (예: Soft Object)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <video autoplay controls muted loop width="100%">
+                <source src="static/videos/pick_place_object6.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-content has-text-centered py-3">
+              <p class="title is-5">Object 6 (예: Tiny Object)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="section hero is-light" id="full-video">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Video Presentation</h2>
+          <h2 class="title is-3">Full Supplementary Video</h2>
+          <p class="subtitle is-6 has-text-grey mb-5">전체 실험 및 메커니즘 소개가 포함된 통합 영상</p>
           <div class="publication-video">
             <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_ID" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
