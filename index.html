@@ -122,9 +122,9 @@
           The proposed robotic hand integrates all components natively within the palm structure. It features a self-contained layout housing the single servomotor transmission, rolling contact joint configurations, and full embedded tendon routing, achieving a highly portable and lightweight configuration.
         </p>
       </div>
-      <figure class="image is-16by9 box">
-        <img src="static/images/hardware_overview.jpg" alt="LUTA Hand Hardware Overview">
-        <figcaption class="has-text-centered mt-2 is-size-6 has-text-grey">
+      <figure class="box has-text-centered">
+        <img src="static/images/hardware_overview.jpg" alt="LUTA Hand Hardware Overview" style="max-width: 100%; height: auto; max-height: 600px; object-fit: contain;">
+        <figcaption class="has-text-centered mt-4 is-size-6 has-text-grey">
           <em>Overall hardware configuration showcasing the integrated palm assembly and multi-link finger modules.</em>
         </figcaption>
       </figure>
@@ -196,7 +196,7 @@
                 <source src="static/videos/pick_place_object5.mp4" type="video/mp4">
               </video>
             </div>
-            <div class="card-content Dried has-text-centered py-3">
+            <div class="card-content has-text-centered py-3">
               <p class="title is-5">Object 5: Compliant/Soft</p>
             </div>
           </div>
@@ -222,42 +222,65 @@
   <section class="section">
     <div class="container is-max-desktop">
       <h2 class="title is-2 has-text-centered mb-6">Key Mechanisms</h2>
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          
-          <h3 class="title is-3">1. Adaptive Grasping Mechanism</h3>
-          <div class="content has-text-justified">
-            <p>
-              The LUTA Hand achieves adaptive grasping through its single, underactuated, tendon-driven design. A single tendon forms a continuous loop sequentially linking all three fingers. When one finger contacts an object and is kinematically constrained, the motor continues to rotate, redirecting the remaining tendon excursion to the non-contacting fingers.
-            </p>
-            <p>
-              This sequential contact behavior enables the hand to passively conform to various shapes and sizes. It allows the natural emergence of both <strong>pinch</strong> and <strong>power grasp</strong> configurations without any active reconfiguration or additional actuation.
-            </p>
+      
+      <div class="columns is-multiline">
+        
+        <div class="column is-6">
+          <div class="box has-text-centered" style="height: 100%; display: flex; flex-direction: column; justify-content: flex-start;">
+            <h3 class="title is-4">1. Underactuated Transmission</h3>
+            <figure class="image mb-4 mt-2" style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
+              <img src="static/images/underactuated_design.jpg" alt="Underactuated Design" style="max-height: 230px; width: auto; object-fit: contain; border-radius: 8px;">
+            </figure>
+            <div class="content has-text-justified">
+              <p>
+                A single servomotor and a shared tendon-routing scheme synchronize the flexion of all three fingers. This drastically reduces mechanical complexity and weight, removing the need for independent joint actuators while maintaining human-like dexterity.
+              </p>
+            </div>
           </div>
-          <figure class="image is-16by9 mb-6">
-            <img src="static/images/fig4_sequential_contact.jpg" alt="Sequential contact during object grasp">
-            <figcaption class="has-text-centered mt-2 is-size-6 has-text-grey">
-              <em>Fig 4. Sequential contact during object grasp: thumb and index engaged first, with remaining tendon excursion redirected to the non-contacting finger.</em>
-            </figcaption>
-          </figure>
-
-          <h3 class="title is-3 mt-6">2. Passive Pretension Mechanism</h3>
-          <div class="content has-text-justified">
-            <p>
-              To enable finger extension without antagonistic actuators, the hand incorporates a passive mechanism comprising elastic extension tendons and rolling contact joint ligaments. The lateral latex ligaments (3M Unitek "Bummer") are deliberately positioned with a <strong>3 mm posterior offset</strong> from the center of rotation. 
-            </p>
-            <p>
-              This specific offset establishes a moment arm at the neutral position, producing a restorative torque that returns the joint to neutral while maintaining lateral stability and limiting parasitic yaw during flexion.
-            </p>
-          </div>
-          <figure class="image is-16by9 mb-6">
-            <img src="static/images/fig5_passive_joint.jpg" alt="Passive joint structure">
-            <figcaption class="has-text-centered mt-2 is-size-6 has-text-grey">
-              <em>Fig 5. Passive joint structure with TPU-based rolling contact and tensioning configurations eliminating the need for additional restoring components.</em>
-            </figcaption>
-          </figure>
-
         </div>
+
+        <div class="column is-6">
+          <div class="box cursor-default has-text-centered" style="height: 100%; display: flex; flex-direction: column; justify-content: flex-start;">
+            <h3 class="title is-4">2. Adaptive Grasping</h3>
+            <figure class="image mb-4 mt-2" style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
+              <img src="static/images/fig4_sequential_contact.jpg" alt="Adaptive Grasping" style="max-height: 230px; width: auto; object-fit: contain; border-radius: 8px;">
+            </figure>
+            <div class="content has-text-justified">
+              <p>
+                The continuous tendon loop allows passive motion distribution. When one finger contacts an object and becomes constrained, the remaining tendon excursion is naturally redirected to the non-contacting fingers, enabling seamless transitions between pinch and power grasps.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-6">
+          <div class="box has-text-centered" style="height: 100%; display: flex; flex-direction: column; justify-content: flex-start;">
+            <h3 class="title is-4">3. Passive Pretension Joint</h3>
+            <figure class="image mb-4 mt-2" style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
+              <img src="static/images/fig5_passive_joint.jpg" alt="Passive Pretension Mechanism" style="max-height: 230px; width: auto; object-fit: contain; border-radius: 8px;">
+            </figure>
+            <div class="content has-text-justified">
+              <p>
+                Elastic lateral ligaments with a 3 mm posterior offset provide a restorative torque for finger extension. This eliminates the need for antagonistic tendons and ensures a highly compact, compliant rolling contact joint with reliable lateral stability.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-6">
+          <div class="box has-text-centered" style="height: 100%; display: flex; flex-direction: column; justify-content: flex-start;">
+            <h3 class="title is-4">4. Lightweight Architecture</h3>
+            <figure class="image mb-4 mt-2" style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
+              <img src="static/images/lightweight_design.jpg" alt="Lightweight Components" style="max-height: 230px; width: auto; object-fit: contain; border-radius: 8px;">
+            </figure>
+            <div class="content has-text-justified">
+              <p>
+                By embedding all actuation components within the palm and utilizing optimized lightweight materials, the hand achieves a highly portable configuration. This design minimizes distal inertia, making it ideal for dynamic and rapid robotic manipulation tasks.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -270,9 +293,9 @@
           Classification of targeted grasp modalities (e.g., pinch vs. power grasps) and geometric objects mapped to validate the functionality of the single-input underactuated architecture. The transition between different grasp modes occurs natively based on object dimensions and environmental constraints.
         </p>
       </div>
-      <figure class="image is-16by9 box">
-        <img src="static/images/taxonomy.jpg" alt="LUTA Hand Grasp Taxonomy">
-        <figcaption class="has-text-centered mt-2 is-size-6 has-text-grey">
+      <figure class="box has-text-centered">
+        <img src="static/images/taxonomy.jpg" alt="LUTA Hand Grasp Taxonomy" style="max-width: 100%; height: auto; max-height: 500px; object-fit: contain;">
+        <figcaption class="has-text-centered mt-4 is-size-6 has-text-grey">
           <em>Taxonomy chart mapping interaction modes across distinct geometric variations.</em>
         </figcaption>
       </figure>
