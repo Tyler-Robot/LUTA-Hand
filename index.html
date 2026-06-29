@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <meta name="title" content="The LUTA Hand - Seoul National University">
-  <meta name="description" content="Development of a Lightweight Underactuated Three-fingered Robotic Hand for Adaptive Grasping.">
+  <meta name="description" content="Development of a Lightweight Underactuated Three-fingered Robotic Hand for Adaptive Grasping using a single motor and tendon-driven mechanism.">
   <meta name="keywords" content="Robotic Hand, Adaptive Grasping, Underactuated Design, Tendon-driven Actuation, Rolling Contact Joint, SNU">
   <meta name="author" content="Seunghwan Byun, Seongkyeong Moon, Eunho Sung, Seungbin You, Yong-Lae Park, Jaeheung Park">
   
@@ -113,6 +113,49 @@
 
   <section class="section">
     <div class="container is-max-desktop">
+      <h2 class="title is-2 has-text-centered mb-6">Key Mechanisms</h2>
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          
+          <h3 class="title is-3">1. Adaptive Grasping Mechanism</h3>
+          <div class="content has-text-justified">
+            <p>
+              The LUTA Hand achieves adaptive grasping through its single, underactuated, tendon-driven design. A single tendon forms a continuous loop sequentially linking all three fingers. When one finger contacts an object and is kinematically constrained, the motor continues to rotate, redirecting the remaining tendon excursion to the non-contacting fingers.
+            </p>
+            <p>
+              This sequential contact behavior enables the hand to passively conform to various shapes and sizes. It allows the natural emergence of both <strong>pinch</strong> and <strong>power grasp</strong> configurations without any active reconfiguration or additional actuation.
+            </p>
+          </div>
+          <figure class="image is-16by9 mb-6">
+            <img src="static/images/fig4_sequential_contact.jpg" alt="Sequential contact during object grasp">
+            <figcaption class="has-text-centered mt-2 is-size-6 has-text-grey">
+              <em>Fig 4. Sequential contact during object grasp: thumb and index engaged first, with remaining tendon excursion redirected to the non-contacting finger.</em>
+            </figcaption>
+          </figure>
+
+          <h3 class="title is-3 mt-6">2. Passive Pretension Mechanism</h3>
+          <div class="content has-text-justified">
+            <p>
+              To enable finger extension without antagonistic actuators, the hand incorporates a passive mechanism comprising elastic extension tendons and rolling contact joint ligaments. The lateral latex ligaments (3M Unitek "Bummer") are deliberately positioned with a <strong>3 mm posterior offset</strong> from the center of rotation. 
+            </p>
+            <p>
+              This specific offset establishes a moment arm at the neutral position, producing a restorative torque that returns the joint to neutral while maintaining lateral stability and limiting parasitic yaw during flexion.
+            </p>
+          </div>
+          <figure class="image is-16by9 mb-6">
+            <img src="static/images/fig5_passive_joint.jpg" alt="Passive joint structure">
+            <figcaption class="has-text-centered mt-2 is-size-6 has-text-grey">
+              <em>Fig 5. Passive joint structure with TPU-based rolling contact and tensioning configurations eliminating the need for additional restoring components.</em>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered mb-5">Grasp & Object Taxonomy</h2>
       <div class="content has-text-justified">
         <p>
@@ -128,14 +171,14 @@
     </div>
   </section>
 
-  <section class="section hero is-light">
+  <section class="section">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered mb-5">Experimental Evaluation</h2>
       
       <div class="columns is-multiline">
         <div class="column is-6">
           <div class="box" style="height: 100%;">
-            <h3 class="title is-4">1. Kinematic & Motion Test</h3>
+            <h4 class="title is-4">1. Kinematic & Motion Test</h4>
             <p class="is-size-6">
               단일 액추에이터를 통한 세 손가락의 동기화된 굴곡(Flexion) 및 롤링 콘택트 조인트의 복원력을 검증하여 일관된 모션 궤적을 확인했습니다.
             </p>
@@ -143,7 +186,7 @@
         </div>
         <div class="column is-6">
           <div class="box" style="height: 100%;">
-            <h3 class="title is-4">2. Passive Adaptation Test</h3>
+            <h4 class="title is-4">2. Passive Adaptation Test</h4>
             <p class="is-size-6">
               물체 접촉 시 텐던 이동량이 비접촉 손가락으로 재분배되는 메커니즘을 평가하여, 별도 센서 없이 형상에 수동 적응하는 능력을 검증했습니다.
             </p>
@@ -151,7 +194,7 @@
         </div>
         <div class="column is-6">
           <div class="box" style="height: 100%;">
-            <h3 class="title is-4">3. Static Grasping Evaluation</h3>
+            <h4 class="title is-4">3. Static Grasping Evaluation</h4>
             <p class="is-size-6">
               다양한 크기, 무게, 재질을 가진 정적 물체들을 안정적으로 파지하고 유지할 수 있는 지지력과 파지 안정성을 정량화했습니다.
             </p>
@@ -159,7 +202,7 @@
         </div>
         <div class="column is-6">
           <div class="box" style="height: 100%;">
-            <h3 class="title is-4">4. Dynamic Manipulation (Pick & Place)</h3>
+            <h4 class="title is-4">4. Dynamic Manipulation (Pick & Place)</h4>
             <p class="is-size-6">
               실시간으로 물체를 집어 올린 후 지정된 위치로 이동시키는 동적 환경 테스트를 통해 실제 작업 환경에서의 활용성을 입증했습니다.
             </p>
@@ -170,7 +213,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section hero is-light">
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered mb-2">Real-time Pick and Place</h2>
       <p class="subtitle is-5 has-text-centered has-text-grey mb-6">물체별 정밀 파지 및 이동 시연 영상</p>
@@ -184,7 +227,7 @@
               </video>
             </div>
             <div class="card-content has-text-centered py-3">
-              <p class="title is-5">Object 1 (예: Cylinder)</p>
+              <p class="title is-5">Object 1 (Cylinder)</p>
             </div>
           </div>
         </div>
@@ -197,7 +240,7 @@
               </video>
             </div>
             <div class="card-content has-text-centered py-3">
-              <p class="title is-5">Object 2 (예: Sphere)</p>
+              <p class="title is-5">Object 2 (Sphere)</p>
             </div>
           </div>
         </div>
@@ -210,7 +253,7 @@
               </video>
             </div>
             <div class="card-content has-text-centered py-3">
-              <p class="title is-5">Object 3 (예: Box)</p>
+              <p class="title is-5">Object 3 (Box)</p>
             </div>
           </div>
         </div>
@@ -223,7 +266,7 @@
               </video>
             </div>
             <div class="card-content has-text-centered py-3">
-              <p class="title is-5">Object 4 (예: Complex Shape)</p>
+              <p class="title is-5">Object 4 (Complex Shape)</p>
             </div>
           </div>
         </div>
@@ -236,7 +279,7 @@
               </video>
             </div>
             <div class="card-content has-text-centered py-3">
-              <p class="title is-5">Object 5 (예: Soft Object)</p>
+              <p class="title is-5">Object 5 (Soft Object)</p>
             </div>
           </div>
         </div>
@@ -249,7 +292,7 @@
               </video>
             </div>
             <div class="card-content has-text-centered py-3">
-              <p class="title is-5">Object 6 (예: Tiny Object)</p>
+              <p class="title is-5">Object 6 (Tiny Object)</p>
             </div>
           </div>
         </div>
@@ -258,7 +301,7 @@
     </div>
   </section>
 
-  <section class="section hero is-light" id="full-video">
+  <section class="section" id="full-video">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -279,7 +322,7 @@
       </div>
       <pre><code>@article{byun2025lutahand,
   title={The LUTA Hand: Development of a Lightweight Underactuated Three-fingered Robotic Hand for Adaptive Grasping},
-  author={Byun, Seunghwan and Moon, Seongkyeong and Sung, Eunho and You, Seungbin and Park, Yong-Lae and Park, Jaeheung},
+  author={Byun, Seunghwan and Moon, Seongkyeong Beet, Sung, Eunho and You, Seungbin and Park, Yong-Lae and Park, Jaeheung},
   journal={International Journal of Control, Automation, and Systems},
   volume={23},
   number={12},
